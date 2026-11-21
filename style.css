@@ -1,0 +1,215 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: white;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  background: #080808;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 23px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.logo span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #d5a63c;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #d5a63c;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  background:
+    linear-gradient(90deg, #080808 15%, #080808aa 65%, #08080855),
+    url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1600")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #d5a63c;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #d5a63c;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 25px;
+  background: #d5a63c;
+  color: #111;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 85px 8%;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section > p:not(.eyebrow) {
+  max-width: 750px;
+  color: #c5c5c5;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.facility {
+  background: #202020;
+  border: 1px solid #373737;
+  padding: 35px;
+  min-height: 155px;
+  transition: 0.3s;
+}
+
+.facility:hover {
+  border-color: #d5a63c;
+  transform: translateY(-5px);
+}
+
+.facility h3 {
+  color: #d5a63c;
+  margin-bottom: 12px;
+}
+
+.facility p {
+  color: #bbb;
+}
+
+.membership {
+  background: #202020;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+  max-width: 550px;
+  margin-top: 25px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 15px;
+  background: #202020;
+  border: 1px solid #555;
+  color: white;
+  font: inherit;
+}
+
+textarea {
+  min-height: 110px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  background: #080808;
+  color: #aaa;
+}
+
+footer h3 {
+  color: #d5a63c;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #080808;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .facility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 55px 6%;
+  }
+}
